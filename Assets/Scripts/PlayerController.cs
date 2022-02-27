@@ -32,7 +32,7 @@ public class PlayerController : MonoBehaviour
         GetComponent<Rigidbody2D>().velocity = new Vector2(Time.deltaTime * speed * horizontalInput,
             Time.deltaTime * speed * verticalInput);
         
-        Debug.Log(horizontalInput);
+        //Debug.Log(horizontalInput);
         
         //GetComponent<Rigidbody2D>().AddForce(Vector2.right * Time.deltaTime * speed * horizontalInput, ForceMode2D.Impulse);
         //GetComponent<Rigidbody2D>().AddForce(Vector2.up * Time.deltaTime * speed * verticalInput, ForceMode2D.Impulse);

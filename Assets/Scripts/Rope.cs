@@ -10,6 +10,7 @@ using UnityEngine;
 public class Rope : MonoBehaviour
 {
     public GameObject player;
+    public GameObject ball;
     private LineRenderer lineRenderer;
     private List<RopeSegment> ropeSegments = new List<RopeSegment>();
     private float ropeSegLen = 0.25f;
@@ -116,6 +117,9 @@ public class Rope : MonoBehaviour
 
         lineRenderer.positionCount = ropePositions.Length;
         lineRenderer.SetPositions(ropePositions);
+        
+        ball.transform.position = ropePositions[this.segmentLength-1];
+        
     }
 
     public struct RopeSegment

@@ -136,7 +136,7 @@ GameObject:
   - component: {fileID: 224039557}
   - component: {fileID: 224039556}
   m_Layer: 0
-  m_Name: Circle
+  m_Name: Ball
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -1208,7 +1208,7 @@ GameObject:
   - component: {fileID: 1363940316}
   - component: {fileID: 1363940315}
   m_Layer: 0
-  m_Name: Tail Ball
+  m_Name: TailBall
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0

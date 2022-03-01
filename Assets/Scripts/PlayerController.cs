@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 400f;
+    private float speed = 10f;
     private float turnSpeed = 30f;
     private float horizontalInput;
     private float verticalInput;
@@ -29,10 +29,12 @@ public class PlayerController : MonoBehaviour
         // GetComponent<Rigidbody2D>().velocity = Vector2.right * Time.deltaTime * speed * horizontalInput;
         // GetComponent<Rigidbody2D>().velocity = Vector2.up * Time.deltaTime * speed * verticalInput;
 
-        GetComponent<Rigidbody2D>().velocity = new Vector2(Time.deltaTime * speed * horizontalInput,
-            Time.deltaTime * speed * verticalInput);
+        // GetComponent<Rigidbody2D>().velocity = new Vector2(Time.deltaTime * speed * horizontalInput,
+        //     Time.deltaTime * speed * verticalInput);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(speed * horizontalInput,
+            speed * verticalInput);
         
-        //Debug.Log(horizontalInput);
+        //Debug.Log(Time.deltaTime);
         
         //GetComponent<Rigidbody2D>().AddForce(Vector2.right * Time.deltaTime * speed * horizontalInput, ForceMode2D.Impulse);
         //GetComponent<Rigidbody2D>().AddForce(Vector2.up * Time.deltaTime * speed * verticalInput, ForceMode2D.Impulse);

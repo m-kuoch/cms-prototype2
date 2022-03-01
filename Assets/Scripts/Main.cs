@@ -7,6 +7,11 @@ public class Main : MonoBehaviour
     public GameObject player;
     public GameObject ball;
 
+    public GameObject goalAText;
+    // public GameObject goalAText;
+    public int numGoalsA = 0;
+    public int numGoalsB = 0;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -33,7 +38,20 @@ public class Main : MonoBehaviour
     void ResetGame(string goalName)
     {
         Debug.Log("Yoyoyo the event callback worked! " + goalName);
+        if (goalName.Equals("GoalA"))
+        {
+            numGoalsA++;
+        }
+        else if (goalName.Equals("GoalB"))
+        {
+            numGoalsB++;
+        }
+
         player.transform.position = new Vector2(10, 0);
+
+        // goalAText.text += numGoalsA;
+        // goalAText.
+        // Debug.Log(goalAText.GetComponent<TextAsset>());
 
         // Reset ball position and velocity
         ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;

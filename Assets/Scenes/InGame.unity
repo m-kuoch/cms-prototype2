@@ -1399,8 +1399,8 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 0.1
-  m_LinearDrag: 0
+  m_Mass: 0.5
+  m_LinearDrag: 0.5
   m_AngularDrag: 0.05
   m_GravityScale: 0
   m_Material: {fileID: 6200000, guid: 49843f1d7bc1e41bab86bd0bb40592b7, type: 2}
@@ -2219,6 +2219,10 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6010890268131770204, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890268131770204, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
@@ -2235,6 +2239,10 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6010890268260158017, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890268260158017, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
@@ -2249,6 +2257,10 @@ PrefabInstance:
     - target: {fileID: 6010890268284373063, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_Mass
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890268284373063, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6010890268284373063, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
@@ -2273,6 +2285,10 @@ PrefabInstance:
     - target: {fileID: 6010890268633573042, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_Mass
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890268633573042, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6010890268633573042, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
@@ -2339,6 +2355,10 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6010890268664555837, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890268664555837, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
@@ -2379,6 +2399,10 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6010890268966112177, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890268966112177, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
@@ -2395,12 +2419,20 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6010890269087900893, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890269087900893, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6010890269318503512, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_Mass
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890269318503512, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6010890269318503512, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
@@ -2427,12 +2459,20 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6010890269319000332, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890269319000332, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 6010890269326050194, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_Mass
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890269326050194, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6010890269326050194, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
@@ -2449,6 +2489,10 @@ PrefabInstance:
     - target: {fileID: 6010890269387415216, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_Mass
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890269387415216, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6010890269387415216, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
@@ -2471,6 +2515,10 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6010890269439630382, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890269439630382, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
@@ -2487,6 +2535,10 @@ PrefabInstance:
       value: 0.05
       objectReference: {fileID: 0}
     - target: {fileID: 6010890269478239053, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890269478239053, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
       value: 0
       objectReference: {fileID: 0}
@@ -2497,6 +2549,10 @@ PrefabInstance:
     - target: {fileID: 6010890269706108708, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_Mass
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890269706108708, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6010890269706108708, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale
@@ -2513,6 +2569,10 @@ PrefabInstance:
     - target: {fileID: 6010890269780051691, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_Mass
       value: 0.05
+      objectReference: {fileID: 0}
+    - target: {fileID: 6010890269780051691, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
+      propertyPath: m_LinearDrag
+      value: 0.5
       objectReference: {fileID: 0}
     - target: {fileID: 6010890269780051691, guid: c6d11b781ebec44ea9ce530838133407, type: 3}
       propertyPath: m_GravityScale

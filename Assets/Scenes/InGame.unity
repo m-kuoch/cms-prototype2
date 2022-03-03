@@ -157,7 +157,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -446.94, y: 304.00006}
+  m_AnchoredPosition: {x: -250, y: 107}
   m_SizeDelta: {x: 53.23, y: 41.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &16406637
@@ -488,7 +488,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -446.94, y: 355.31006}
+  m_AnchoredPosition: {x: -250, y: 158.31}
   m_SizeDelta: {x: 53.23, y: 41.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &299462954
@@ -567,7 +567,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -587.78, y: 355.31}
+  m_AnchoredPosition: {x: -390.84003, y: 158.30994}
   m_SizeDelta: {x: 228.44, y: 41.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &357666512
@@ -1269,7 +1269,7 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0.5, y: 0.5}
   m_AnchorMax: {x: 0.5, y: 0.5}
-  m_AnchoredPosition: {x: -587.78, y: 304}
+  m_AnchoredPosition: {x: -390.84003, y: 106.99994}
   m_SizeDelta: {x: 228.44, y: 41.37}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &986411077
@@ -1684,7 +1684,7 @@ FixedJoint2D:
   m_BreakTorque: Infinity
   m_AutoConfigureConnectedAnchor: 1
   m_Anchor: {x: 0, y: 0}
-  m_ConnectedAnchor: {x: 3.0986893, y: 0.035527248}
+  m_ConnectedAnchor: {x: 3.0986893, y: 0.035527017}
   m_DampingRatio: 0
   m_Frequency: 0
 --- !u!1 &1524567614 stripped

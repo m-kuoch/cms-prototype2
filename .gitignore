@@ -75,3 +75,6 @@ crashlytics-build.properties
 .idea
 .vscode
 .vsconfig
+.DS_Store
+Assets_ball/
+Assets/.DS_Store

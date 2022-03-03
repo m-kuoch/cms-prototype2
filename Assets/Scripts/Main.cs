@@ -50,7 +50,7 @@ public class Main : MonoBehaviour
             numGoalsB++;
         }
 
-        player.transform.position = new Vector2(10, 0);
+        // player.transform.position = new Vector2(10, 0);
 
         goalAText.text = numGoalsA.ToString();
         goalBText.text = numGoalsB.ToString();

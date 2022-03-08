@@ -5,9 +5,10 @@ using UnityEngine;
 public class PlayerController : MonoBehaviour
 {
     private float speed = 10f;
-    private float turnSpeed = 30f;
+    private float turnSpeed = 200f;
     private float horizontalInput;
     private float verticalInput;
+    private float spinInput;
 
     // Start is called before the first frame update
     void Start()
@@ -16,10 +17,11 @@ public class PlayerController : MonoBehaviour
     }
 
     // Update is called once per frame
-    void Update()
+    void FixedUpdate()
     {
         horizontalInput = Input.GetAxis("Horizontal");
         verticalInput = Input.GetAxis("Vertical");
+        spinInput = Input.GetAxis("Spin");
         // Move player forwards based on input
         //transform.Translate(Vector2.right * Time.deltaTime * speed * horizontalInput);
         //transform.Translate(Vector2.up * Time.deltaTime * speed * forwardInput);
@@ -33,8 +35,11 @@ public class PlayerController : MonoBehaviour
         //     Time.deltaTime * speed * verticalInput);
         GetComponent<Rigidbody2D>().velocity = new Vector2(speed * horizontalInput,
             speed * verticalInput);
-        
-        //Debug.Log(Time.deltaTime);
+        GetComponent<Rigidbody2D>().angularDrag = 0;
+        GetComponent<Rigidbody2D>().angularVelocity = spinInput * turnSpeed;
+        //GetComponent<Rigidbody2D>().MoveRotation(spinInput * turnSpeed);
+
+        Debug.Log(GetComponent<Rigidbody2D>().angularVelocity);
         
         //GetComponent<Rigidbody2D>().AddForce(Vector2.right * Time.deltaTime * speed * horizontalInput, ForceMode2D.Impulse);
         //GetComponent<Rigidbody2D>().AddForce(Vector2.up * Time.deltaTime * speed * verticalInput, ForceMode2D.Impulse);

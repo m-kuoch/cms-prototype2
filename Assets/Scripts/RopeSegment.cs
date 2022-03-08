@@ -18,7 +18,7 @@ public class RopeSegment : MonoBehaviour
         }
         else
         {
-            GetComponent<HingeJoint2D>().connectedAnchor = new Vector2(0, 0);
+            GetComponent<FixedJoint2D>().connectedAnchor = new Vector2(0, 0);
         }
     }
 

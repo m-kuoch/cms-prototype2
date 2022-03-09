@@ -13,7 +13,7 @@ public class PlayerController : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-        
+
     }
 
     // Update is called once per frame
@@ -39,9 +39,20 @@ public class PlayerController : MonoBehaviour
         GetComponent<Rigidbody2D>().angularVelocity = spinInput * turnSpeed;
         //GetComponent<Rigidbody2D>().MoveRotation(spinInput * turnSpeed);
 
-        Debug.Log(GetComponent<Rigidbody2D>().angularVelocity);
-        
+        // Debug.Log(GetComponent<Rigidbody2D>().angularVelocity);
+
         //GetComponent<Rigidbody2D>().AddForce(Vector2.right * Time.deltaTime * speed * horizontalInput, ForceMode2D.Impulse);
         //GetComponent<Rigidbody2D>().AddForce(Vector2.up * Time.deltaTime * speed * verticalInput, ForceMode2D.Impulse);
+    }
+
+    void OnCollisionEnter2D(Collision2D col)
+    {
+        Debug.Log("Detected collision");
+
+        if (col.gameObject.tag == "IgnoredByPlayer")
+        {
+            Debug.Log("Ignoring collision");
+            Physics2D.IgnoreCollision(col.collider, col.otherCollider);
+        }
     }
 }

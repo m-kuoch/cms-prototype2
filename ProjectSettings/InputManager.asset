@@ -41,8 +41,8 @@ InputManager:
     m_Name: SpinPlayer1
     descriptiveName: Player 1's spin (rotation) controls
     descriptiveNegativeName: 
-    negativeButton: q
-    positiveButton: e
+    negativeButton: g
+    positiveButton: f
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3
@@ -57,8 +57,8 @@ InputManager:
     m_Name: SpinPlayer2
     descriptiveName: Player 2's spin (rotation) controls
     descriptiveNegativeName: 
-    negativeButton: k
-    positiveButton: l
+    negativeButton: .
+    positiveButton: ','
     altNegativeButton: 
     altPositiveButton: 
     gravity: 3

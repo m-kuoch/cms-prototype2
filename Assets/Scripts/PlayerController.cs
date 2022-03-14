@@ -10,10 +10,12 @@ public class PlayerController : MonoBehaviour
     private float verticalInput;
     private float spinInput;
 
+    private Vector2 boostVector;
+
     // Start is called before the first frame update
     void Start()
     {
-
+        boostVector = Vector2.zero;
     }
 
     // Update is called once per frame
@@ -33,8 +35,18 @@ public class PlayerController : MonoBehaviour
 
         // GetComponent<Rigidbody2D>().velocity = new Vector2(Time.deltaTime * speed * horizontalInput,
         //     Time.deltaTime * speed * verticalInput);
-        GetComponent<Rigidbody2D>().velocity = new Vector2(speed * horizontalInput,
-            speed * verticalInput);
+        GetComponent<Rigidbody2D>().velocity = new Vector2(speed * horizontalInput, speed * verticalInput) + boostVector;
+        if (Mathf.Abs(boostVector.magnitude - 0) <= 0.001)
+        {
+            boostVector = Vector2.zero;
+        }
+        else
+        {
+            boostVector = 0.8f * boostVector;
+        }
+
+
+
         GetComponent<Rigidbody2D>().angularDrag = 0;
         GetComponent<Rigidbody2D>().angularVelocity = spinInput * turnSpeed;
         //GetComponent<Rigidbody2D>().MoveRotation(spinInput * turnSpeed);
@@ -47,12 +59,17 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        Debug.Log("Detected collision");
-
         if (col.gameObject.tag == "IgnoredByPlayer")
         {
             Debug.Log("Ignoring collision");
             Physics2D.IgnoreCollision(col.collider, col.otherCollider);
+            return;
+        }
+
+        if (col.gameObject.tag == "GivesPlayerBoost")
+        {
+            Debug.Log("Increasing velocity by" + col.relativeVelocity);
+            boostVector = 10 * col.relativeVelocity;
         }
     }
 }

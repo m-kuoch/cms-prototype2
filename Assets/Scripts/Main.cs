@@ -7,6 +7,9 @@ public class Main : MonoBehaviour
     public GameObject player;
     public GameObject ball;
 
+    public ParticleSystem goalAParticles;
+    public ParticleSystem goalBParticles;
+
     // public GameObject goalAText;
 
     public Text goalAText;
@@ -18,7 +21,6 @@ public class Main : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
-
     }
 
     void OnEnable()
@@ -40,13 +42,19 @@ public class Main : MonoBehaviour
 
     void ResetGame(string goalName)
     {
-        Debug.Log("Yoyoyo the event callback worked! " + goalName);
+        // Debug.Log("Yoyoyo the event callback worked! " + goalName);
         if (goalName.Equals("GoalA"))
         {
+            // Debug.Log("Playing particle system");
+            goalAParticles.Stop();
+            goalAParticles.Play();
             numGoalsA++;
         }
         else if (goalName.Equals("GoalB"))
         {
+            // Debug.Log("Playing particle system");
+            goalBParticles.Stop();
+            goalBParticles.Play();
             numGoalsB++;
         }
 

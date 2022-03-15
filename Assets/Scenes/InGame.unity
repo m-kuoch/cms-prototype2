@@ -11650,6 +11650,9 @@ MonoBehaviour:
   goalBText: {fileID: 16406637}
   numGoalsA: 0
   numGoalsB: 0
+  SHAKE_DURATION: 0.7
+  SHAKE_MAGNITUDE: 0.2
+  DAMPING_SPEED: 2
 --- !u!1 &1122958858
 GameObject:
   m_ObjectHideFlags: 0

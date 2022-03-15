@@ -8,6 +8,9 @@ public class Ball : MonoBehaviour
     public float MAX_SPEED;
     private float curBoostMultiplier;
 
+    public delegate void CameraShake();
+    public static event CameraShake OnCameraShake;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -43,6 +46,7 @@ public class Ball : MonoBehaviour
         {
             Debug.Log("Hit wall");
             this.curBoostMultiplier = BOOST_MULTIPLIER;
+            OnCameraShake();
         }
     }
 }

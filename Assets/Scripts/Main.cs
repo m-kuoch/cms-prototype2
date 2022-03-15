@@ -18,6 +18,15 @@ public class Main : MonoBehaviour
     public int numGoalsA = 0;
     public int numGoalsB = 0;
 
+    // Constants for camera shake
+    public float SHAKE_DURATION;
+    public float SHAKE_MAGNITUDE;
+    public float DAMPING_SPEED;
+    Vector3 initialPosition;
+
+    // Variables for camera shake
+    private float shakeDuration = 0f;
+
     // Start is called before the first frame update
     void Start()
     {
@@ -25,19 +34,40 @@ public class Main : MonoBehaviour
 
     void OnEnable()
     {
+        initialPosition = transform.localPosition;
         Goal.OnScore += ResetGame;
+        Goal.OnCameraShake += CameraShake;
+        Ball.OnCameraShake += CameraShake;
     }
 
     void onDisable()
     {
         Goal.OnScore -= ResetGame;
+        Goal.OnCameraShake -= CameraShake;
+        Ball.OnCameraShake -= CameraShake;
     }
 
 
     // Update is called once per frame
     void Update()
     {
+        // Shake code adapted from https://medium.com/nice-things-ios-android-development/basic-2d-screen-shake-in-unity-9c27b56b516
+        if (shakeDuration > 0)
+        {
+            transform.localPosition = initialPosition + Random.insideUnitSphere * SHAKE_MAGNITUDE;
 
+            shakeDuration -= Time.deltaTime * DAMPING_SPEED;
+        }
+        else
+        {
+            shakeDuration = 0f;
+            transform.localPosition = initialPosition;
+        }
+    }
+
+    void CameraShake()
+    {
+        shakeDuration = SHAKE_DURATION;
     }
 
     void ResetGame(string goalName)

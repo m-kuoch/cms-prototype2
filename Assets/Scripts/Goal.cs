@@ -6,6 +6,8 @@ public class Goal : MonoBehaviour
 {
 
     public delegate void Score(string goalName);
+    public delegate void CameraShake();
+    public static event CameraShake OnCameraShake;
     public static event Score OnScore;
 
     // Start is called before the first frame update
@@ -34,6 +36,7 @@ public class Goal : MonoBehaviour
         if (OnScore != null)
         {
             OnScore(this.name);
+            OnCameraShake();
         }
     }
 }

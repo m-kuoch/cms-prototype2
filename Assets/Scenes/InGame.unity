@@ -5969,7 +5969,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -12171,7 +12171,7 @@ Rigidbody2D:
   m_Simulated: 1
   m_UseFullKinematicContacts: 0
   m_UseAutoMass: 0
-  m_Mass: 2
+  m_Mass: 5
   m_LinearDrag: 0
   m_AngularDrag: 0.05
   m_GravityScale: 0
@@ -12324,7 +12324,7 @@ PrefabInstance:
       objectReference: {fileID: 1748407153}
     - target: {fileID: 6027703752719801490, guid: 7be0278e706374e3caa995d444393b1c, type: 3}
       propertyPath: prefabRopeSegs.Array.size
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6027703752719801490, guid: 7be0278e706374e3caa995d444393b1c, type: 3}
       propertyPath: prefabRopeSegs.Array.data[0]
@@ -12724,7 +12724,7 @@ PrefabInstance:
       objectReference: {fileID: 587829192}
     - target: {fileID: 6027703752719801490, guid: 7be0278e706374e3caa995d444393b1c, type: 3}
       propertyPath: prefabRopeSegs.Array.size
-      value: 26
+      value: 25
       objectReference: {fileID: 0}
     - target: {fileID: 6027703752719801490, guid: 7be0278e706374e3caa995d444393b1c, type: 3}
       propertyPath: prefabRopeSegs.Array.data[0]

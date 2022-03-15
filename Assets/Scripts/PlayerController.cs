@@ -4,7 +4,7 @@ using UnityEngine;
 
 public class PlayerController : MonoBehaviour
 {
-    private float speed = 10f;
+    private float speed = 35f;
     private float turnSpeed = 200f;
     private float horizontalInput;
     private float verticalInput;
@@ -69,7 +69,7 @@ public class PlayerController : MonoBehaviour
         if (col.gameObject.tag == "GivesPlayerBoost")
         {
             Debug.Log("Increasing velocity by" + col.relativeVelocity);
-            boostVector = 10 * col.relativeVelocity;
+            boostVector = 2 * col.relativeVelocity;
         }
     }
 }

@@ -376,6 +376,7 @@ GameObject:
   - component: {fileID: 224039558}
   - component: {fileID: 224039557}
   - component: {fileID: 224039556}
+  - component: {fileID: 224039560}
   m_Layer: 0
   m_Name: Ball
   m_TagString: IgnoredByPlayer
@@ -485,6 +486,20 @@ Transform:
   m_Father: {fileID: 0}
   m_RootOrder: 1
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &224039560
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 224039555}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 3db614b8910ce784fab73f90f2421075, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  BOOST_MULTIPLIER: 2
+  MAX_SPEED: 20
 --- !u!1 &228579975
 GameObject:
   m_ObjectHideFlags: 0
@@ -499,7 +514,7 @@ GameObject:
   - component: {fileID: 228579977}
   m_Layer: 0
   m_Name: Static Sprite (4)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -5772,7 +5787,7 @@ GameObject:
   - component: {fileID: 569966623}
   m_Layer: 0
   m_Name: Static Sprite (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -6070,7 +6085,7 @@ GameObject:
   - component: {fileID: 626774745}
   m_Layer: 0
   m_Name: Static Sprite (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11167,7 +11182,7 @@ GameObject:
   - component: {fileID: 804086441}
   m_Layer: 0
   m_Name: CornerWall (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11298,7 +11313,7 @@ GameObject:
   - component: {fileID: 983750081}
   m_Layer: 0
   m_Name: Static Sprite (5)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11649,7 +11664,7 @@ GameObject:
   - component: {fileID: 1122958859}
   m_Layer: 0
   m_Name: Static Sprite
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11780,7 +11795,7 @@ GameObject:
   - component: {fileID: 1222833017}
   m_Layer: 0
   m_Name: CornerWall (2)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -11911,7 +11926,7 @@ GameObject:
   - component: {fileID: 1708024285}
   m_Layer: 0
   m_Name: CornerWall (1)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12176,7 +12191,7 @@ GameObject:
   - component: {fileID: 1822560515}
   m_Layer: 0
   m_Name: Static Sprite (3)
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -12510,7 +12525,7 @@ GameObject:
   - component: {fileID: 2010333826}
   m_Layer: 0
   m_Name: CornerWall
-  m_TagString: Untagged
+  m_TagString: Wall
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0

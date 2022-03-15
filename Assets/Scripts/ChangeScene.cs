@@ -1,11 +1,19 @@
 using UnityEngine;
+using UnityEngine.UI;
 using UnityEngine.SceneManagement;
 
 
-public class OnClick : MonoBehaviour
+public class ChangeScene : MonoBehaviour
 {
+    public Button startButton;
+
+    void Start()
+    {
+        startButton.onClick.AddListener(LoadScene);
+    }
+
     void LoadScene()
     {
-        Debug.Log("deeznuts");
+        SceneManager.LoadScene("InGame");
     }
 }

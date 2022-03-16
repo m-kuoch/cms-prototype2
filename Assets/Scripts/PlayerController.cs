@@ -21,6 +21,11 @@ public class PlayerController : MonoBehaviour
     // Update is called once per frame
     void FixedUpdate()
     {
+        if (Main.gameOver)
+        {
+            return;
+        }
+
         horizontalInput = Input.GetAxis("Horizontal" + this.name);
         verticalInput = Input.GetAxis("Vertical" + this.name);
         spinInput = Input.GetAxis("Spin" + this.name);
@@ -35,6 +40,7 @@ public class PlayerController : MonoBehaviour
 
         // GetComponent<Rigidbody2D>().velocity = new Vector2(Time.deltaTime * speed * horizontalInput,
         //     Time.deltaTime * speed * verticalInput);
+
         GetComponent<Rigidbody2D>().velocity = new Vector2(speed * horizontalInput, speed * verticalInput) + boostVector;
         if (Mathf.Abs(boostVector.magnitude - 0) <= 0.001)
         {

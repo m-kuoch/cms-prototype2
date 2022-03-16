@@ -2,10 +2,14 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using UnityEngine.SceneManagement;
+using TMPro;
 public class Main : MonoBehaviour
 {
     public GameObject player;
     public GameObject ball;
+
+    public GameObject gameOverModal;
 
     public ParticleSystem goalAParticles;
     public ParticleSystem goalBParticles;
@@ -14,9 +18,12 @@ public class Main : MonoBehaviour
 
     public Text goalAText;
     public Text goalBText;
-    // public GameObject goalAText;
+
+    public TextMeshProUGUI modalTitle;
     public int numGoalsA = 0;
     public int numGoalsB = 0;
+
+    public int minGoalsToWin;
 
     // Constants for camera shake
     public float SHAKE_DURATION;
@@ -24,25 +31,33 @@ public class Main : MonoBehaviour
     public float DAMPING_SPEED;
     Vector3 initialPosition;
 
+    public Button playAgainButton;
+    public Button quitButton;
+
+    public static bool gameOver;
+
     // Variables for camera shake
     private float shakeDuration = 0f;
 
     // Start is called before the first frame update
     void Start()
     {
+        gameOver = false;
+        playAgainButton.onClick.AddListener(ResetGame);
+        quitButton.onClick.AddListener(ReturnToMenu);
     }
 
     void OnEnable()
     {
         initialPosition = transform.localPosition;
-        Goal.OnScore += ResetGame;
+        Goal.OnScore += UpdateScore;
         Goal.OnCameraShake += CameraShake;
         Ball.OnCameraShake += CameraShake;
     }
 
     void onDisable()
     {
-        Goal.OnScore -= ResetGame;
+        Goal.OnScore -= UpdateScore;
         Goal.OnCameraShake -= CameraShake;
         Ball.OnCameraShake -= CameraShake;
     }
@@ -70,9 +85,19 @@ public class Main : MonoBehaviour
         shakeDuration = SHAKE_DURATION;
     }
 
-    void ResetGame(string goalName)
+    void ResetGame()
     {
-        // Debug.Log("Yoyoyo the event callback worked! " + goalName);
+        gameOver = false;
+        gameOverModal.SetActive(false);
+        numGoalsA = 0;
+        numGoalsB = 0;
+        goalAText.text = numGoalsA.ToString();
+        goalBText.text = numGoalsB.ToString();
+    }
+
+    void UpdateScore(string goalName)
+    {
+
         if (goalName.Equals("GoalA"))
         {
             // Debug.Log("Playing particle system");
@@ -88,6 +113,15 @@ public class Main : MonoBehaviour
             numGoalsB++;
         }
 
+        if (numGoalsA >= minGoalsToWin)
+        {
+            TriggerWin("Blue");
+        }
+        else if (numGoalsB >= minGoalsToWin)
+        {
+            TriggerWin("Red");
+        }
+
         // player.transform.position = new Vector2(10, 0);
 
         goalAText.text = numGoalsA.ToString();
@@ -98,5 +132,17 @@ public class Main : MonoBehaviour
         ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
         ball.transform.position = new Vector2(0, 0);
         return;
+    }
+
+    private void TriggerWin(string winnerName)
+    {
+        gameOverModal.SetActive(true);
+        modalTitle.text = winnerName + " Wins!";
+        gameOver = true;
+    }
+
+    void ReturnToMenu()
+    {
+        SceneManager.LoadScene("StartGame");
     }
 }

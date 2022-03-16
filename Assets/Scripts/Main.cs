@@ -39,6 +39,13 @@ public class Main : MonoBehaviour
     // Variables for camera shake
     private float shakeDuration = 0f;
 
+    void Awake()
+    {
+        DontDestroyOnLoad(goalAParticles);
+        DontDestroyOnLoad(goalBParticles);
+        DontDestroyOnLoad(gameOverModal);
+    }
+
     // Start is called before the first frame update
     void Start()
     {
@@ -55,11 +62,13 @@ public class Main : MonoBehaviour
         Ball.OnCameraShake += CameraShake;
     }
 
-    void onDisable()
+    void OnDisable()
     {
         Goal.OnScore -= UpdateScore;
         Goal.OnCameraShake -= CameraShake;
         Ball.OnCameraShake -= CameraShake;
+        playAgainButton.onClick.RemoveAllListeners();
+        quitButton.onClick.RemoveAllListeners();
     }
 
 
@@ -89,10 +98,16 @@ public class Main : MonoBehaviour
     {
         gameOver = false;
         gameOverModal.SetActive(false);
+
+        // Update text
         numGoalsA = 0;
         numGoalsB = 0;
         goalAText.text = numGoalsA.ToString();
         goalBText.text = numGoalsB.ToString();
+
+        // Reset ball position and velocity
+        ball.GetComponent<Rigidbody2D>().velocity = Vector2.zero;
+        ball.transform.position = new Vector2(0, 0);
     }
 
     void UpdateScore(string goalName)

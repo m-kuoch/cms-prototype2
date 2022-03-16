@@ -16,6 +16,14 @@ public class PlayerController : MonoBehaviour
     void Start()
     {
         boostVector = Vector2.zero;
+
+        // Ignore collisions
+        GameObject[] objs = GameObject.FindGameObjectsWithTag("IgnoredByPlayer");
+
+        foreach (GameObject obj in objs)
+        {
+            Physics2D.IgnoreCollision(obj.GetComponent<Collider2D>(), this.GetComponent<Collider2D>());
+        }
     }
 
     // Update is called once per frame
@@ -65,13 +73,6 @@ public class PlayerController : MonoBehaviour
 
     void OnCollisionEnter2D(Collision2D col)
     {
-        if (col.gameObject.tag == "IgnoredByPlayer")
-        {
-            Debug.Log("Ignoring collision");
-            Physics2D.IgnoreCollision(col.collider, col.otherCollider);
-            return;
-        }
-
         if (col.gameObject.tag == "GivesPlayerBoost")
         {
             Debug.Log("Increasing velocity by" + col.relativeVelocity);

@@ -2,7 +2,6 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
-using UnityEngine.SceneManagement;
 using TMPro;
 public class Main : MonoBehaviour
 {
@@ -32,8 +31,6 @@ public class Main : MonoBehaviour
     Vector3 initialPosition;
 
     public Button playAgainButton;
-    public Button quitButton;
-
     public static bool gameOver;
 
     // Variables for camera shake
@@ -51,7 +48,6 @@ public class Main : MonoBehaviour
     {
         gameOver = false;
         playAgainButton.onClick.AddListener(ResetGame);
-        quitButton.onClick.AddListener(ReturnToMenu);
     }
 
     void OnEnable()
@@ -68,7 +64,6 @@ public class Main : MonoBehaviour
         Goal.OnCameraShake -= CameraShake;
         Ball.OnCameraShake -= CameraShake;
         playAgainButton.onClick.RemoveAllListeners();
-        quitButton.onClick.RemoveAllListeners();
     }
 
 
@@ -154,10 +149,5 @@ public class Main : MonoBehaviour
         gameOverModal.SetActive(true);
         modalTitle.text = winnerName + " Wins!";
         gameOver = true;
-    }
-
-    void ReturnToMenu()
-    {
-        SceneManager.LoadScene("StartGame");
     }
 }

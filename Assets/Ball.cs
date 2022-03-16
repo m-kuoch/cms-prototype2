@@ -44,7 +44,7 @@ public class Ball : MonoBehaviour
     {
         if (col.gameObject.CompareTag("Wall"))
         {
-            Debug.Log("Hit wall");
+            // Debug.Log("Hit wall");
             this.curBoostMultiplier = BOOST_MULTIPLIER;
             OnCameraShake();
         }

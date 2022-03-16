@@ -75,7 +75,7 @@ public class PlayerController : MonoBehaviour
     {
         if (col.gameObject.tag == "GivesPlayerBoost")
         {
-            Debug.Log("Increasing velocity by" + col.relativeVelocity);
+            // Debug.Log("Increasing velocity by" + col.relativeVelocity);
             boostVector = 2 * col.relativeVelocity;
         }
     }

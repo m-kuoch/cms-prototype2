@@ -25,14 +25,14 @@ public class Goal : MonoBehaviour
     void OnCollisionEnter2D(Collision2D col)
     {
         GameObject collidedObj = col.collider.gameObject;
-        Debug.Log("On: " + this.name + " | Collided: " + collidedObj.name);
+        // Debug.Log("On: " + this.name + " | Collided: " + collidedObj.name);
 
         if (!collidedObj.name.Equals("Ball"))
         {
             return;
         }
 
-        Debug.Log("Ball hit the goal, Score");
+        // Debug.Log("Ball hit the goal, Score");
         if (OnScore != null)
         {
             OnScore(this.name);

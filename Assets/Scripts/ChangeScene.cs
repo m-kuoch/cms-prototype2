@@ -5,20 +5,8 @@ using UnityEngine.SceneManagement;
 
 public class ChangeScene : MonoBehaviour
 {
-    public Button startButton;
-
-    void OnEnable()
+    public void LoadScene(string sceneName)
     {
-        startButton.onClick.AddListener(LoadScene);
-    }
-
-    void OnDisable()
-    {
-        startButton.onClick.RemoveAllListeners();
-    }
-
-    void LoadScene()
-    {
-        SceneManager.LoadScene("InGame");
+        SceneManager.LoadScene(sceneName);
     }
 }

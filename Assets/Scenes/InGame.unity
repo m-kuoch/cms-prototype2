@@ -12104,7 +12104,7 @@ MonoBehaviour:
   modalTitle: {fileID: 1877745589}
   numGoalsA: 0
   numGoalsB: 0
-  minGoalsToWin: 1
+  minGoalsToWin: 5
   SHAKE_DURATION: 0.7
   SHAKE_MAGNITUDE: 0.2
   DAMPING_SPEED: 2
